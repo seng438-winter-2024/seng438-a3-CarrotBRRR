@@ -229,6 +229,32 @@ public class DataUtilitiesTest extends DataUtilities {
 
 
     }	
+
+	/**
+	 * Method meant to help achieve 100% branch coverage. Passes a Values2D object with its last element as null
+	 */
+	@Test
+	public void testCalculateColumnTotal_NullLastElement() {
+
+		 context.checking(new Expectations() {{
+			// Define expectations for the getValue() method based on your data
+	            allowing(values2DMock).getRowCount();
+	            will(returnValue(3)); // Example row count
+	            allowing(values2DMock).getColumnCount();
+	            will(returnValue(2)); // Example column count
+	            allowing(values2DMock).getValue(0, 0);
+	            will(returnValue(5.0)); // Example value at row 0, column 0
+	            allowing(values2DMock).getValue(1, 0);
+	            will(returnValue(3.0)); // Example value at row 1, column 0
+	            allowing(values2DMock).getValue(2, 0);
+	            will(returnValue(null)); // Example value at row 2, column 0
+	        }});
+		
+        double result = DataUtilities.calculateColumnTotal(values2DMock, 0);
+
+        // Verify the result
+        assertEquals(8.0, result, 0.0001); // With invalid input, a total of zero will be returned.
+    }
 	
 	/*------------------------- getCumulativePercentages -------------------------*/
 
@@ -646,6 +672,35 @@ public class DataUtilitiesTest extends DataUtilities {
 
         assertEquals("The calculated row total should be zero for an empty dataset",
                 expectedTotal, DataUtilities.calculateRowTotal(values2DMock, row), .000000001d);
+    }
+
+	/**
+	 * Method meant to help achieve 100% branch coverage. Passes a Values2D object with its last element as null
+	 */
+	@Test
+	public void testCalculateRowTotal_NullLastElement() {
+
+
+		 context.checking(new Expectations() {{
+				// Define expectations for the getValue() method based on your data
+	            allowing(values2DMock).getRowCount();
+	            will(returnValue(3)); // Example row count
+	            allowing(values2DMock).getColumnCount();
+	            will(returnValue(2)); // Example column count
+	            allowing(values2DMock).getValue(0, 0);
+	            will(returnValue(5.0)); // Example value at row 0, column 0
+	            allowing(values2DMock).getValue(1, 0);
+	            will(returnValue(3.0)); // Example value at row 1, column 0
+	            allowing(values2DMock).getValue(2, 0);
+	            will(returnValue(null)); // Example value at row 2, column 0
+	        }});
+
+		
+        double result = DataUtilities.calculateColumnTotal(values2DMock, 0);
+
+        // Verify the result
+        assertEquals(8.0, result, 0.0001); // With invalid input, a total of zero will be returned.
+        
     }
 
 	@Test

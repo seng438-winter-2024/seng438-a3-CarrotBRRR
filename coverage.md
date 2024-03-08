@@ -49,22 +49,7 @@ Note:
 # Coverage tools
 Explain what you fixed (e.g., removing mock objects, updating IDEs, switching to another tool, etc.)
 
-## eclEmma
-### Pros of EclEmma: 
-- Easy to use
-- Built in to eclipse
-- Has useful coverage metrics
 
-### Cons EclEmma:
-- No condition coverage
-
-## Metrics:
-- Statement Coverage Pros: Identifies executed code.
-- Statement Coverage Cons: Doesn't guarantee logical correctness.
-- Branch Coverage Pros: Identifies paths not taken.
-- Branch Coverage Cons: Doesn't guarantee branch condition correctness.
-- Method Coverage Pros: Ensures all methods are tested.
-- Method Coverage Cons: Doesn't ensure method perform properly in all scenarios.
 
 ---
 
