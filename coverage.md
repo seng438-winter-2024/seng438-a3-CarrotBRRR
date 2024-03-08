@@ -2,15 +2,33 @@
 
 What we changed:
 - Range Test:
+    UNKNOWN
     - testUpperBound_FailsWhenLessThanLowerBound()
     - testUpperBound_FailsWhenLessThanLowerBound_BVT_BLB()
     - testGetLength_PositiveLength() (fixed typo lol)
+    FINALIZED
+    - testUpperBound_FailsWhenLessThanLowerBound
+    - testUpperBound_FailsWhenLessThanLowerBound_BVT_BLB
+    - testGetLength_PositiveLength
 
 - DataUtilities Test:
+    UNKNOWN
     - calculateRowTotal_CorrectTotal
     - testGetCumulativePercentages_WithVerySmallValues
     - testCalculateColumnTotal_NegativeColumnArg_BLB
     - testGetCumulativePercentages_WithVerySmallValues
+    FINALIZED
+    - testCalculateColumnTotal_UsingNullAsDataArgument
+    - testCalculateColumnTotal_NegativeColumnArg_BLB
+    - testGetCumulativePercentages_NullDataArg
+    - testGetCumulativePercentages_WithAllNulls
+    - testGetCumulativePercentages_WithVerySmallValues
+    - calculateRowTotal_CorrectTotal
+    - calculateRowTotalWithNegativeValues_ReturnCorrectTotal
+    - calculateRowTotalWithZeroValues_ReturnCorrectTotal
+    - calculateRowTotalWithEmptyDataSet_ReturnZeroTotal
+    - testCreateNumberArray2D_ValidArray
+    - testCreateNumberArray2D_NullArray
 Old
 | Test Class            | Statement Coverage | Branch Coverage | Method Coverage    |
 |-----------------------|--------------------|-----------------|--------------------|
