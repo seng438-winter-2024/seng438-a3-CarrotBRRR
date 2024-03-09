@@ -1,26 +1,5 @@
 # Control Flow Coverage
 
-What we changed:
-- Range Test:
-    - testUpperBound_FailsWhenLessThanLowerBound
-    - testUpperBound_FailsWhenLessThanLowerBound_BVT_BLB
-    - testGetLength_PositiveLength
-
-- DataUtilities Test:
-    - testCalculateColumnTotal_UsingNullAsDataArgument
-    - testCalculateColumnTotal_NegativeColumnArg_BLB
-    - testGetCumulativePercentages_NullDataArg
-    - testGetCumulativePercentages_WithAllNulls
-    - testGetCumulativePercentages_WithVerySmallValues
-    - calculateRowTotal_CorrectTotal
-    - calculateRowTotalWithNegativeValues_ReturnCorrectTotal
-    - calculateRowTotalWithZeroValues_ReturnCorrectTotal
-    - calculateRowTotalWithEmptyDataSet_ReturnZeroTotal
-    - testCreateNumberArray2D_ValidArray
-    - testCreateNumberArray2D_NullArray
-
-
-
 Old
 | Test Class            | Statement Coverage | Branch Coverage | Method Coverage    |
 |-----------------------|--------------------|-----------------|--------------------|
@@ -40,7 +19,6 @@ Note:
 
 # Coverage tools
 Explain what you fixed (e.g., removing mock objects, updating IDEs, switching to another tool, etc.)
-
 
 
 ---
